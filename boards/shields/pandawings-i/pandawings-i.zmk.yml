@@ -2,7 +2,7 @@ file_format: "1"
 id: pandawings-i
 name: PandaWings I
 type: shield
-url: https://github.com/IndiePandaaaaa/PandaWings-kbd
+url: https://github.com/AkytharPandaaa/PandaWings-kbd
 requires: [seeeduino_xiao_ble]
 features:
   - keys
