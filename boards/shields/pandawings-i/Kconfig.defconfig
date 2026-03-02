@@ -10,6 +10,12 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+config CONFIG_ZMK_USB
+    default y
+
+config CONFIG_ZMK_USB_BOOT
+    default y
+
 endif
 
 if SHIELD_PANDAWINGS-I_DONGLE || SHIELD_PANDAWINGS-I_LEFT || SHIELD_PANDAWINGS-I_RIGHT
