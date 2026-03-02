@@ -1,6 +1,5 @@
 manifest:
   defaults:
-    remote: AkytharPandaaa
     revision: v0.3 # pin all the imports to v0.3
 
   remotes:
