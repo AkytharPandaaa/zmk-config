@@ -7,8 +7,15 @@ if SHIELD_PANDAWINGS-I_LEFT
 config ZMK_KEYBOARD_NAME
     default "PandaWings I"
 
+config ZMK_SPLIT
+    default y
+
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
+
+# change to 2 for dongle setup (default: 1)
+config CONFIG_ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 1
 
 config CONFIG_ZMK_USB
     default y
