@@ -4,6 +4,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <locale/keys_de.h>
 
 / {
     behaviors {
@@ -129,19 +130,19 @@
         default_layer {
             display-name = "QWERTY";
             bindings = <
-//                   ┌───┬───┬───┬────────────┬─────┐                    ┌──────┬────────────┬───────┬───────┬───────┐
-//                   │ Q │ W │ E │     R      │  T  │                    │  Y   │     U      │   I   │   O   │   P   │
-//    ┌──────────────┼───┼───┼───┼────────────┼─────┤                    ├──────┼────────────┼───────┼───────┼───────┼─────────────┐
-//    │   lt 2 esc   │ A │ S │ D │ &hm lsft F │  G  │                    │  H   │ &hm lsft J │   K   │   L   │ &as ; │ &td_bracket │
-//    ├──────────────┼───┼───┼───┼────────────┼─────┤                    ├──────┼────────────┼───────┼───────┼───────┼─────────────┤
-//    │ left_CONTROL │ Z │ X │ C │     V      │  B  │                    │  N   │     M      │ &as , │ &as . │ &as / │    &as '    │
-//    └──────────────┴───┴───┴───┼────────────┼─────┼──────────┐   ┌─────┼──────┼────────────┼───────┴───────┴───────┴─────────────┘
-//                               │    lsft    │ spc │ lt 1 del │   │ tab │ bspc │   &as \    │
-//                               └────────────┴─────┴──────────┘   └─────┴──────┴────────────┘
-                     &kp Q   &kp W   &kp E   &kp R              &kp T                                 &kp Y           &kp U              &kp I       &kp O     &kp P
-  &lt 2 ESCAPE       &kp A   &kp S   &kp D   &hm LEFT_SHIFT F   &kp G                                 &kp H           &hm LEFT_SHIFT J   &kp K       &kp L     &as SEMI    &td_bracket
-  &kp LEFT_CONTROL   &kp Z   &kp X   &kp C   &kp V              &kp B                                 &kp N           &kp M              &as COMMA   &as DOT   &as SLASH   &as SINGLE_QUOTE
-                                             &kp LSHIFT         &kp SPACE   &lt 1 DEL       &kp TAB   &kp BACKSPACE   &as BACKSLASH
+//                   ┌──────┬───┬───┬────────────┬─────┐                    ┌──────┬────────────┬───────┬───────┬───────┐
+//                   │  Q   │ W │ E │     R      │  T  │                    │  Y   │     U      │   I   │   O   │   P   │
+//    ┌──────────────┼──────┼───┼───┼────────────┼─────┤                    ├──────┼────────────┼───────┼───────┼───────┼─────────────┐
+//    │   lt 2 esc   │  A   │ S │ D │ &hm lsft F │  G  │                    │  H   │ &hm lsft J │   K   │   L   │ &as ; │ &td_bracket │
+//    ├──────────────┼──────┼───┼───┼────────────┼─────┤                    ├──────┼────────────┼───────┼───────┼───────┼─────────────┤
+//    │ left_CONTROL │ DE_Y │ X │ C │     V      │  B  │                    │  N   │     M      │ &as , │ &as . │ &as / │    &as '    │
+//    └──────────────┴──────┴───┴───┼────────────┼─────┼──────────┐   ┌─────┼──────┼────────────┼───────┴───────┴───────┴─────────────┘
+//                                  │    lsft    │ spc │ lt 1 del │   │ tab │ bspc │   &as \    │
+//                                  └────────────┴─────┴──────────┘   └─────┴──────┴────────────┘
+                     &kp Q      &kp W   &kp E   &kp R              &kp T                                 &kp Y           &kp U              &kp I       &kp O     &kp P
+  &lt 2 ESCAPE       &kp A      &kp S   &kp D   &hm LEFT_SHIFT F   &kp G                                 &kp H           &hm LEFT_SHIFT J   &kp K       &kp L     &as SEMI    &td_bracket
+  &kp LEFT_CONTROL   &kp DE_Y   &kp X   &kp C   &kp V              &kp B                                 &kp N           &kp M              &as COMMA   &as DOT   &as SLASH   &as SINGLE_QUOTE
+                                                &kp LSHIFT         &kp SPACE   &lt 1 DEL       &kp TAB   &kp BACKSPACE   &as BACKSLASH
             >;
         };
 
