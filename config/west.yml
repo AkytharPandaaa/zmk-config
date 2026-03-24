@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: v0.3
+    revision: main
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -10,5 +10,9 @@ manifest:
     - name: zmk
       remote: zmkfirmware
       import: app/west.yml
+    - name: zmk-keyboard-module-pandawings-i
+      url: https://github.com/AkytharPandaaa/zmk-keyboard-module-pandawings-i
+      revision: main
+      path: modules/zmk-keyboard-module-pandawings-i
   self:
     path: config
