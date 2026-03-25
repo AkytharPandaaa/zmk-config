@@ -1,6 +1,6 @@
 manifest:
   defaults:
-    revision: main
+    revision: v0.3
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
@@ -12,15 +12,12 @@ manifest:
       import: app/west.yml
     - name: zmk-keyboard-module-pandawings-i
       url: https://github.com/AkytharPandaaa/zmk-keyboard-module-pandawings-i
-      revision: main
       path: modules/zmk-keyboard-module-pandawings-i
     - name: zmk-module-caps-word-de
       url: https://github.com/robertwidfen/zmk-module-caps-word-de.git
-      revision: main
       path: modules/zmk-module-caps-word-de
     - name: zmk-locales
       url: https://github.com/joelspadin/zmk-locales.git
-      revision: main
       path: modules/zmk-locales
   self:
     path: config
