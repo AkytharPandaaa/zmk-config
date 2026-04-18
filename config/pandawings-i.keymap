@@ -312,13 +312,13 @@
 //    ┌─────┼──────┼──────┼───┼───┼──────┤               ├─────┼───────────┼──────┼──────┼─────┼──────┐
 //    │ esc │ lsft │  A   │ S │ D │  F   │               │     │   left    │ down │ rght │     │ DE_. │
 //    ├─────┼──────┼──────┼───┼───┼──────┤               ├─────┼───────────┼──────┼──────┼─────┼──────┤
-//    │ tab │ lctl │ DE_Y │ X │ C │  V   │               │     │           │      │      │     │      │
+//    │ tab │ lctl │ DE_Y │ X │ C │  V   │               │     │           │      │      │     │ DE_, │
 //    └─────┴──────┴──────┴───┼───┼──────┼─────┐   ┌─────┼─────┼───────────┼──────┴──────┴─────┴──────┘
 //                            │ M │ mo 7 │ spc │   │ ent │ f12 │ lsft(tab) │
 //                            └───┴──────┴─────┘   └─────┴─────┴───────────┘
                &kp G            &kp Q      &kp W   &kp E   &kp R                                &none     &none         &kp UP           &none       &none
   &kp ESCAPE   &kp LEFT_SHIFT   &kp A      &kp S   &kp D   &kp F                                &none     &kp LEFT      &kp DOWN_ARROW   &kp RIGHT   &none   &kp DE_DOT
-  &kp TAB      &kp LCTRL        &kp DE_Y   &kp X   &kp C   &kp V                                &none     &none         &none            &none       &none   &none
+  &kp TAB      &kp LCTRL        &kp DE_Y   &kp X   &kp C   &kp V                                &none     &none         &none            &none       &none   &kp DE_COMMA
                                                    &kp M   &mo 7   &kp SPACE       &kp RETURN   &kp F12   &kp LS(TAB)
             >;
         };
@@ -326,18 +326,18 @@
         GAME_2 {
             bindings = <
 //           ┌─────────────────┬──────┬─────┬──────┬──────┐               ┌───────────┬───────────┬───────────────┬───────────────────────────┬─────┐
-//           │ &g_vr_inventory │ DE_2 │     │ DE_4 │  N   │               │           │ lsft(tab) │   lsft(f2)    │        lsft(DE_^)         │     │
+//           │ &g_vr_inventory │ DE_6 │     │ DE_7 │  N   │               │           │ lsft(tab) │   lsft(f2)    │        lsft(DE_^)         │     │
 //    ┌──────┼─────────────────┼──────┼─────┼──────┼──────┤               ├───────────┼───────────┼───────────────┼───────────────────────────┼─────┼────────────────┐
-//    │  f5  │                 │ DE_1 │     │ DE_3 │  I   │               │ lalt(tab) │           │ lsft(lctl(M)) │ lsft(lctl(DE_U_UMlaltUT)) │     │                │
+//    │  f5  │      DE_1       │ DE_2 │     │ DE_3 │ DE_4 │               │ lalt(tab) │           │ lsft(lctl(M)) │ lsft(lctl(DE_U_UMlaltUT)) │     │ &g_pw_necklace │
 //    ├──────┼─────────────────┼──────┼─────┼──────┼──────┤               ├───────────┼───────────┼───────────────┼───────────────────────────┼─────┼────────────────┤
-//    │ lalt │                 │  B   │  J  │  T   │ DE_5 │               │           │    f3     │      f7       │            f9             │     │ &g_pw_necklace │
+//    │ lalt │        H        │  B   │  I  │  T   │ DE_5 │               │           │    f3     │      f7       │            f9             │     │                │
 //    └──────┴─────────────────┴──────┴─────┼──────┼──────┼─────┐   ┌─────┼───────────┼───────────┼───────────────┴───────────────────────────┴─────┴────────────────┘
-//                                          │      │      │     │   │     │           │           │
+//                                          │ DE_8 │      │     │   │     │           │           │
 //                                          └──────┴──────┴─────┘   └─────┴───────────┴───────────┘
-                 &g_vr_inventory   &kp DE_N2   &none   &kp DE_N4   &kp N                           &none         &kp LS(TAB)   &kp LS(F2)      &kp LS(DE_CARET)          &none
-  &kp F5         &none             &kp DE_N1   &none   &kp DE_N3   &kp I                           &kp LA(TAB)   &none         &kp LS(LC(M))   &kp LS(LC(DE_U_UMLAUT))   &none   &none
-  &kp LEFT_ALT   &none             &kp B       &kp J   &kp T       &kp DE_N5                       &none         &kp F3        &kp F7          &kp F9                    &none   &g_pw_necklace
-                                                       &none       &none       &none       &none   &none         &none
+                 &g_vr_inventory   &kp DE_N6   &trans   &kp DE_N7   &kp N                           &none         &kp LS(TAB)   &kp LS(F2)      &kp LS(DE_CARET)          &none
+  &kp F5         &kp DE_N1         &kp DE_N2   &trans   &kp DE_N3   &kp DE_N4                       &kp LA(TAB)   &none         &kp LS(LC(M))   &kp LS(LC(DE_U_UMLAUT))   &none   &g_pw_necklace
+  &kp LEFT_ALT   &kp H             &kp B       &kp I    &kp T       &kp DE_N5                       &none         &kp F3        &kp F7          &kp F9                    &none   &none
+                                                        &kp DE_N8   &none       &none       &none   &none         &none
             >;
         };
 
