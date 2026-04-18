@@ -7,11 +7,6 @@
 
 // https://github.com/urob/zmk-config#timeless-homerow-mods
 
-#define PRIOR_IDLE 100   // 125
-#define QUICK_TAP_MS 175 // 200
-#define TAPPING_TERM 200 // 225
-#define HRM_TAP_TERM 275
-
 &caps_word { continue-list = <DELETE DEL BACKSPACE MINUS KP_MINUS SLASH QUESTION SEMICOLON LEFT_BRACKET RIGHT_BRACKET LEFT_BRACE RIGHT_BRACE SINGLE_QUOTE DE_A_UMLAUT DE_O_UMLAUT DE_U_UMLAUT>; };
 
 // &lt &mt from https://github.com/urob/zmk-config/blob/main/config/base.keymap
@@ -29,7 +24,7 @@
         ht_as: autoshift_hold_tap {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            tapping-term-ms = <QUICK_TAP_MS>;
+            tapping-term-ms = <175>;
             bindings = <&shifted>, <&kp>;
         };
 
