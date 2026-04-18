@@ -147,7 +147,7 @@
         v_inv: vrising_clear_inventory {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>;
+            wait-ms = <100>;
             tap-ms = <50>;
             bindings = <&kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E>;
         };
