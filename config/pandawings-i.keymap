@@ -48,6 +48,11 @@
             key-positions = <35 36>;
         };
 
+        to_game_layer {
+            bindings = <&to 6>;
+            key-positions = <34 35>;
+        };
+
         select_all {
             bindings = <&kp LC(A)>;
             key-positions = <23 24>;
