@@ -28,7 +28,7 @@
             bindings = <&shifted>, <&kp>;
         };
 
-        hm: homerow_mods {
+        hms: homerow_mods_shift {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
             flavor = "tap-unless-interrupted";
@@ -38,6 +38,7 @@
 
             require-prior-idle-ms = <50>;
         };
+
     };
 
     combos {
@@ -214,19 +215,19 @@
         QWERTZ {
 
             bindings = <
-//                   ┌──────┬───┬───┬────────────┬─────┐                         ┌──────┬────────────┬──────────┬──────────┬───────────────┐
-//                   │  Q   │ W │ E │     R      │  T  │                         │ DE_Z │     U      │    I     │    O     │       P       │
-//    ┌──────────────┼──────┼───┼───┼────────────┼─────┤                         ├──────┼────────────┼──────────┼──────────┼───────────────┼───────────────┐
-//    │   lt 4 esc   │  A   │ S │ D │ &hm lsft F │  G  │                         │  H   │ &hm lsft J │    K     │    L     │ DE_O_UMlaltUT │ DE_U_UMlaltUT │
-//    ├──────────────┼──────┼───┼───┼────────────┼─────┤                         ├──────┼────────────┼──────────┼──────────┼───────────────┼───────────────┤
-//    │ left_CONTROL │ DE_Y │ X │ C │     V      │  B  │                         │  N   │     M      │ &as DE_, │ &as DE_. │   &as DE_-    │ DE_A_UMlaltUT │
-//    └──────────────┴──────┴───┴───┼────────────┼─────┼──────────┐   ┌──────────┼──────┼────────────┼──────────┴──────────┴───────────────┴───────────────┘
-//                                  │ lctl(spc)  │ spc │ lt 3 del │   │ lt 2 tab │ bspc │ &as DE_SZ  │
-//                                  └────────────┴─────┴──────────┘   └──────────┴──────┴────────────┘
-                     &kp Q      &kp W   &kp E   &kp R              &kp T                                      &kp DE_Z        &kp U              &kp I          &kp O        &kp P
-  &lt 4 ESCAPE       &kp A      &kp S   &kp D   &hm LEFT_SHIFT F   &kp G                                      &kp H           &hm LEFT_SHIFT J   &kp K          &kp L        &kp DE_O_UMLAUT   &kp DE_U_UMLAUT
-  &kp LEFT_CONTROL   &kp DE_Y   &kp X   &kp C   &kp V              &kp B                                      &kp N           &kp M              &as DE_COMMA   &as DE_DOT   &as DE_MINUS      &kp DE_A_UMLAUT
-                                                &kp LC(SPACE)      &kp SPACE   &lt 3 DELETE       &lt 2 TAB   &kp BACKSPACE   &as DE_SZ
+//                   ┌──────┬───┬───┬─────────────┬─────┐                         ┌──────┬────────────┬──────────┬──────────┬───────────────┐
+//                   │  Q   │ W │ E │      R      │  T  │                         │ DE_Z │     U      │    I     │    O     │       P       │
+//    ┌──────────────┼──────┼───┼───┼─────────────┼─────┤                         ├──────┼────────────┼──────────┼──────────┼───────────────┼───────────────┐
+//    │   lt 4 esc   │  A   │ S │ D │ &hms lsft F │  G  │                         │  H   │ &hm lsft J │    K     │    L     │ DE_O_UMlaltUT │ DE_U_UMlaltUT │
+//    ├──────────────┼──────┼───┼───┼─────────────┼─────┤                         ├──────┼────────────┼──────────┼──────────┼───────────────┼───────────────┤
+//    │ left_CONTROL │ DE_Y │ X │ C │      V      │  B  │                         │  N   │     M      │ &as DE_, │ &as DE_. │   &as DE_-    │ DE_A_UMlaltUT │
+//    └──────────────┴──────┴───┴───┼─────────────┼─────┼──────────┐   ┌──────────┼──────┼────────────┼──────────┴──────────┴───────────────┴───────────────┘
+//                                  │  lctl(spc)  │ spc │ lt 3 del │   │ lt 2 tab │ bspc │ &as DE_SZ  │
+//                                  └─────────────┴─────┴──────────┘   └──────────┴──────┴────────────┘
+                     &kp Q      &kp W   &kp E   &kp R               &kp T                                      &kp DE_Z        &kp U              &kp I          &kp O        &kp P
+  &lt 4 ESCAPE       &kp A      &kp S   &kp D   &hms LEFT_SHIFT F   &kp G                                      &kp H           &hm LEFT_SHIFT J   &kp K          &kp L        &kp DE_O_UMLAUT   &kp DE_U_UMLAUT
+  &kp LEFT_CONTROL   &kp DE_Y   &kp X   &kp C   &kp V               &kp B                                      &kp N           &kp M              &as DE_COMMA   &as DE_DOT   &as DE_MINUS      &kp DE_A_UMLAUT
+                                                &kp LC(SPACE)       &kp SPACE   &lt 3 DELETE       &lt 2 TAB   &kp BACKSPACE   &as DE_SZ
             >;
         };
 
@@ -235,16 +236,16 @@
 //                   ┌──────┬──────┬───────────────┬───────────────┬───────────────┐                         ┌──────┬────────────┬──────────┬──────────┬───┐
 //                   │ DE_Z │ DE_Y │       U       │       A       │       Q       │                         │  P   │     B      │    M     │    L     │ F │
 //    ┌──────────────┼──────┼──────┼───────────────┼───────────────┼───────────────┤                         ├──────┼────────────┼──────────┼──────────┼───┼───────────┐
-//    │   lt 4 esc   │  C   │  S   │       I       │  &hm lsft E   │       O       │                         │  D   │ &hm lsft T │    N     │    R     │ H │ &as DE_SZ │
+//    │   lt 4 esc   │  C   │  S   │       I       │  &hms lsft E  │       O       │                         │  D   │ &hm lsft T │    N     │    R     │ H │ &as DE_SZ │
 //    ├──────────────┼──────┼──────┼───────────────┼───────────────┼───────────────┤                         ├──────┼────────────┼──────────┼──────────┼───┼───────────┤
 //    │ left_CONTROL │  V   │  X   │ DE_U_UMlaltUT │ DE_A_UMlaltUT │ DE_O_UMlaltUT │                         │  W   │     G      │ &as DE_, │ &as DE_. │ K │     J     │
 //    └──────────────┴──────┴──────┴───────────────┼───────────────┼───────────────┼──────────┐   ┌──────────┼──────┼────────────┼──────────┴──────────┴───┴───────────┘
 //                                                 │     to 6      │      spc      │ lt 3 del │   │ lt 2 tab │ bspc │  &as DE_-  │
 //                                                 └───────────────┴───────────────┴──────────┘   └──────────┴──────┴────────────┘
-                     &kp DE_Z   &kp DE_Y   &kp U             &kp A              &kp Q                                            &kp P           &kp B              &kp M          &kp L        &kp F
-  &lt 4 ESCAPE       &kp C      &kp S      &kp I             &hm LEFT_SHIFT E   &kp O                                            &kp D           &hm LEFT_SHIFT T   &kp N          &kp R        &kp H   &as DE_SZ
-  &kp LEFT_CONTROL   &kp V      &kp X      &kp DE_U_UMLAUT   &kp DE_A_UMLAUT    &kp DE_O_UMLAUT                                  &kp W           &kp G              &as DE_COMMA   &as DE_DOT   &kp K   &kp J
-                                                             &to 6              &kp SPACE         &lt 3 DELETE       &lt 2 TAB   &kp BACKSPACE   &as DE_MINUS
+                     &kp DE_Z   &kp DE_Y   &kp U             &kp A               &kp Q                                            &kp P           &kp B              &kp M          &kp L        &kp F
+  &lt 4 ESCAPE       &kp C      &kp S      &kp I             &hms LEFT_SHIFT E   &kp O                                            &kp D           &hm LEFT_SHIFT T   &kp N          &kp R        &kp H   &as DE_SZ
+  &kp LEFT_CONTROL   &kp V      &kp X      &kp DE_U_UMLAUT   &kp DE_A_UMLAUT     &kp DE_O_UMLAUT                                  &kp W           &kp G              &as DE_COMMA   &as DE_DOT   &kp K   &kp J
+                                                             &to 6               &kp SPACE         &lt 3 DELETE       &lt 2 TAB   &kp BACKSPACE   &as DE_MINUS
             >;
         };
 
