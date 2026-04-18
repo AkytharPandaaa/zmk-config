@@ -64,6 +64,14 @@
             hold-trigger-on-release;
             hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 15 22 23 24 25 26 27 34 35 36>;
         };
+
+        td_space: td_space {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            bindings = <&kp SPACE>, <&spc_dot>;
+
+            tapping-term-ms = <300>;
+        };
     };
 
     combos {
@@ -159,7 +167,7 @@
     };
 
     macros {
-        g_vr_inventory: vrising_clear_inventory {
+        v_inv: vrising_clear_inventory {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <50>;
@@ -167,7 +175,7 @@
             bindings = <&kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E &kp R &mkp RCLK &kp E>;
         };
 
-        g_pw_necklace: palworld_spawn_fix_necklaced_pals {
+        p_nec: palworld_spawn_fix_necklaced_pals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <250>;
@@ -215,6 +223,13 @@
             #binding-cells = <0>;
             bindings = <&kp DE_COLON &kp Q &kp A &kp RETURN>;
         };
+
+        spc_dot: spc_dot {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp DE_DOT &kp SPACE>;
+            label = "SPC_DOT";
+        };
     };
 
     keymap {
@@ -230,7 +245,7 @@
 &kp Q                              &kp W            &kp E                &kp R              &kp T           &kp DE_Z   &kp U              &kp I                &kp O            &kp P
 &lt 3 ESCAPE      &hml LEFT_WIN A  &hml LEFT_ALT S  &hml LEFT_CONTROL D  &hms LEFT_SHIFT F  &kp G           &kp H      &hms LEFT_SHIFT J  &hmr LEFT_CONTROL K  &hmr LEFT_ALT L  &hmr LEFT_GUI DE_O_UMLAUT  &kp DE_U_UMLAUT
 &kp LEFT_CONTROL  &kp DE_Y         &kp X            &kp C                &kp V              &kp B           &kp N      &kp M              &as DE_COMMA         &as DE_DOT       &as DE_MINUS               &kp DE_A_UMLAUT
-                                                    &kp LC(SPACE)        &kp SPACE          &lt 2 DELETE    &lt 1 TAB  &kp BACKSPACE      &as DE_SZ
+                                                    &kp LC(SPACE)        &td_space          &lt 2 DELETE    &lt 1 TAB  &kp BACKSPACE      &as DE_SZ
             >;
         };
 
@@ -281,10 +296,10 @@
 
         GAME_2 {
             bindings = <
-&g_vr_inventory             &kp DE_N6  &trans     &kp DE_N7  &kp N        &none        &kp LS(TAB)  &kp LS(F2)     &kp LS(DE_CARET)         &none
-&kp F5           &kp DE_N1  &kp DE_N2  &trans     &kp DE_N3  &kp DE_N4    &kp LA(TAB)  &none        &kp LS(LC(M))  &kp LS(LC(DE_U_UMLAUT))  &none  &g_pw_necklace
-&kp LEFT_ALT     &kp H      &kp B      &kp I      &kp T      &kp DE_N5    &none        &kp F3       &kp F7         &kp F9                   &none  &none
-                                       &kp DE_N8  &none      &none        &none        &none        &none
+&v_inv                   &kp DE_N6  &trans     &kp DE_N7  &kp N        &none        &kp LS(TAB)  &kp LS(F2)     &kp LS(DE_CARET)         &none
+&kp F5        &kp DE_N1  &kp DE_N2  &trans     &kp DE_N3  &kp DE_N4    &kp LA(TAB)  &none        &kp LS(LC(M))  &kp LS(LC(DE_U_UMLAUT))  &none  &p_nec
+&kp LEFT_ALT  &kp H      &kp B      &kp I      &kp T      &kp DE_N5    &none        &kp F3       &kp F7         &kp F9                   &none  &none
+                                    &kp DE_N8  &none      &none        &none        &none        &none
             >;
         };
 
