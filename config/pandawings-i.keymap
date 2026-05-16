@@ -155,9 +155,9 @@
         p_nec: palworld_spawn_fix_necklaced_pals {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <250>;
-            tap-ms = <100>;
-            bindings = <&kp DE_N3 &kp E &kp DE_N3 &kp E &kp DE_N3 &kp E &kp DE_N3 &kp E &kp DE_N3 &kp E &kp DE_N3 &kp E &kp D &kp W>;
+            wait-ms = <150>;
+            tap-ms = <150>;
+            bindings = <&kp DE_N3 &kp E &kp DE_N3 &kp E &kp DE_N3 &kp E &kp DE_N3 &kp E &kp DE_N3 &kp E &kp D &kp W>;
         };
 
         shifted: macro_shifted_kp {
