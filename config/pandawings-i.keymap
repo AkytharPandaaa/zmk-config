@@ -40,7 +40,7 @@
             quick-tap-ms = <175>;
             bindings = <&kp>, <&kp>;
 
-            require-prior-idle-ms = <150>;
+            require-prior-idle-ms = <50>;
         };
 
         hmo: homerow_mods_others {
