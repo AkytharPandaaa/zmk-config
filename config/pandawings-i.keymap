@@ -207,7 +207,7 @@
         vimgit: vimgit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp ESCAPE &kp SPACE &kp L &kp G>;
+            bindings = <&kp ESCAPE &kp DE_COLON &kp W &kp RETURN &kp SPACE &kp L &kp G>;
         };
     };
 
