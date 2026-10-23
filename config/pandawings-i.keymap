@@ -195,20 +195,19 @@
         vimsave: vimsave {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_COLON &kp W &kp A &kp RETURN>;
+            bindings = <&kp ESCAPE &kp DE_COLON &kp W &kp A &kp RETURN>;
         };
 
         vimquit: vimquit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp DE_COLON &kp Q &kp A &kp RETURN>;
+            bindings = <&kp ESCAPE &kp DE_COLON &kp Q &kp A &kp RETURN>;
         };
 
         vimgit: vimgit {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp SPACE &kp L &kp G>;
-            label = "VIMGIT";
+            bindings = <&kp ESCAPE &kp SPACE &kp L &kp G>;
         };
     };
 
