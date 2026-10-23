@@ -258,19 +258,19 @@
 
         DESKTOP+NUMBERS {
             bindings = <
-//                 ┌────────────┬───────────────┬─────────┬─────────┬───────────────┐                ┌─────────┬──────┬──────┬──────┬──────┐
-//                 │  lgui(up)  │  lgui(left)   │ lgui(E) │ lgui(R) │ lgui(lsft(H)) │                │ DE_EURO │ DE_7 │ DE_8 │ DE_9 │ DE_^ │
-//    ┌────────────┼────────────┼───────────────┼─────────┼─────────┼───────────────┤                ├─────────┼──────┼──────┼──────┼──────┼──────────┐
-//    │ lsft(lgui) │  lgui(O)   │ lgui(lsft(S)) │ lgui(D) │ lgui(F) │ lgui(lsft(G)) │                │  DE_=   │ DE_4 │ DE_5 │ DE_6 │ kp_+ │   kp_/   │
-//    ├────────────┼────────────┼───────────────┼─────────┼─────────┼───────────────┤                ├─────────┼──────┼──────┼──────┼──────┼──────────┤
-//    │    lgui    │ lgui(down) │  lgui(rght)   │ lgui(C) │ lgui(V) │ lgui(lsft(B)) │                │  kp_*   │ DE_1 │ DE_2 │ DE_3 │ kp_- │ &as DE_. │
-//    └────────────┴────────────┴───────────────┴─────────┼─────────┼───────────────┼─────┐   ┌──────┼─────────┼──────┼──────┴──────┴──────┴──────────┘
-//                                                        │  lsft   │               │     │   │ DE_, │  DE_0   │ bspc │
-//                                                        └─────────┴───────────────┴─────┘   └──────┴─────────┴──────┘
-                     &kp LG(UP_ARROW)     &kp LG(LEFT_ARROW)    &kp LG(E)   &kp LG(R)        &kp LG(LS(H))                              &kp DE_EURO       &kp DE_N7       &kp DE_N8   &kp DE_N9   &kp DE_CARET
-  &kp LS(LEFT_GUI)   &kp LG(O)            &kp LG(LS(S))         &kp LG(D)   &kp LG(F)        &kp LG(LS(G))                              &kp DE_EQUAL      &kp DE_N4       &kp DE_N5   &kp DE_N6   &kp KP_PLUS    &kp KP_SLASH
-  &kp LEFT_GUI       &kp LG(DOWN_ARROW)   &kp LG(RIGHT_ARROW)   &kp LG(C)   &kp LG(V)        &kp LG(LS(B))                              &kp KP_ASTERISK   &kp DE_N1       &kp DE_N2   &kp DE_N3   &kp KP_MINUS   &as DE_DOT
-                                                                            &kp LEFT_SHIFT   &none           &none       &kp DE_COMMA   &kp DE_N0         &kp BACKSPACE
+//                 ┌────────────┬───────────────┬─────────┬────────────────────┬───────────────┐                ┌─────────┬──────┬──────┬──────┬──────┐
+//                 │  lgui(up)  │  lgui(left)   │ lgui(E) │      lgui(R)       │ lgui(lsft(H)) │                │ DE_EURO │ DE_7 │ DE_8 │ DE_9 │ DE_^ │
+//    ┌────────────┼────────────┼───────────────┼─────────┼────────────────────┼───────────────┤                ├─────────┼──────┼──────┼──────┼──────┼──────────┐
+//    │ lsft(lgui) │  lgui(O)   │ lgui(lsft(S)) │ lgui(D) │      lgui(F)       │ lgui(lsft(G)) │                │  DE_=   │ DE_4 │ DE_5 │ DE_6 │ kp_+ │   kp_/   │
+//    ├────────────┼────────────┼───────────────┼─────────┼────────────────────┼───────────────┤                ├─────────┼──────┼──────┼──────┼──────┼──────────┤
+//    │    lgui    │ lgui(down) │  lgui(rght)   │ lgui(C) │      lgui(V)       │ lgui(lsft(B)) │                │  kp_*   │ DE_1 │ DE_2 │ DE_3 │ kp_- │ &as DE_. │
+//    └────────────┴────────────┴───────────────┴─────────┼────────────────────┼───────────────┼─────┐   ┌──────┼─────────┼──────┼──────┴──────┴──────┴──────────┘
+//                                                        │ lsft(left_CONTROL) │               │     │   │ DE_, │  DE_0   │ bspc │
+//                                                        └────────────────────┴───────────────┴─────┘   └──────┴─────────┴──────┘
+                     &kp LG(UP_ARROW)     &kp LG(LEFT_ARROW)    &kp LG(E)   &kp LG(R)              &kp LG(LS(H))                              &kp DE_EURO       &kp DE_N7       &kp DE_N8   &kp DE_N9   &kp DE_CARET
+  &kp LS(LEFT_GUI)   &kp LG(O)            &kp LG(LS(S))         &kp LG(D)   &kp LG(F)              &kp LG(LS(G))                              &kp DE_EQUAL      &kp DE_N4       &kp DE_N5   &kp DE_N6   &kp KP_PLUS    &kp KP_SLASH
+  &kp LEFT_GUI       &kp LG(DOWN_ARROW)   &kp LG(RIGHT_ARROW)   &kp LG(C)   &kp LG(V)              &kp LG(LS(B))                              &kp KP_ASTERISK   &kp DE_N1       &kp DE_N2   &kp DE_N3   &kp KP_MINUS   &as DE_DOT
+                                                                            &kp LS(LEFT_CONTROL)   &none           &none       &kp DE_COMMA   &kp DE_N0         &kp BACKSPACE
             >;
         };
 
