@@ -146,7 +146,7 @@
         };
 
         bt_reset {
-            bindings = <&bt_reset>;
+            bindings = <&bt BT_CLR>;
             key-positions = <6 7 8>;
             layers = <3>;
         };
